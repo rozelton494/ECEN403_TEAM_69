@@ -26,6 +26,10 @@ class TurtleBot(Node):
 		# messeage is of type pose, subscribes to the topic /turtle1/pose and the callback function is called update_pose. call back function is called when message is received.
 		self.pose_subscriber = self.create_subscription(Pose, '/turtle1/pose', self.update_pose, 10)
 
+
+		# sub 2
+		self.cam_sub = self.create_subscription(Pose, 'topic', self.cam_update, 10)
+
 		# create service client
 		self.client = self.create_client(TeleportAbsolute, 'turtle1/teleport_absolute')
 		self.request = TeleportAbsolute.Request()
@@ -38,10 +42,16 @@ class TurtleBot(Node):
 
 		# member variable for position
 		self.pose = Pose()
-
+		self.cam_update_called = False
+		self.cam_pose = Pose()
 		# establish rate
 		self.rate = self.create_rate(10)
 	
+	def cam_update(self, data):
+		self.cam_pose = data
+		self.cam_update_called = True		
+		#print(self.cam_pose.x, self.cam_pose.y)
+
 	# resets turtle position
 	def send_request(self, x, y, theta):
 		self.request.x = x
@@ -151,7 +161,33 @@ class TurtleBot(Node):
 		# publish to stop rotation
 		self.velocity_publisher.publish(msg)
 
+	
 		return abs((self.steering_angle(goal_pose) - self.pose.theta) * 180 / pi), ((final_time - initial_time)/1e9), oscillations
+
+	def cam_goal(self):
+		'''
+		rclpy.spin_once(self)
+		print(self.cam_pose.x)
+		#print((self.cam_pose.x - 320) / (110/640)) 
+		return (self.cam_pose.x - 320)/(110/640)
+		'''	
+	
+	def cam_angle(self, angular_tolerance, kp, ki, kd):
+		while not self.cam_update_called:
+			rclpy.spin_once(self)
+	
+		msg = Twist()
+		
+		while (abs(self.cam_pose.x - 320) >= angular_tolerance):
+		#while (abs(self.cam_goal() - self.pose.theta >= angular_tolerance)):
+			rclpy.spin_once(self)
+			print(self.cam_pose.x - 320)
+			msg.angular.z = (self.cam_pose.x - 320)/(110 * 1000/640)
+			self.velocity_publisher.publish(msg)	
+
+		msg.angular.z = 0.0
+		self.velocity_publisher.publish(msg)	
+		
 
 	def move2goal(self, goal_pose, distance_tolerance, ctrl_type, kp, ki, kd):
 		msg = Twist()
@@ -336,8 +372,7 @@ class TurtleBot(Node):
 
 		#op = int(input("Simultaneous or sequential motor control?\n1) Simultaneous\n2) Sequential\n"))
 		goal_pose = Pose()
-		op1 =int(input("\nChoose mode of operation:\n\t1) Angular gain optimizer\n\t2) Linear gain optimizer\n\t3) Regular (Angular -> Linear movement)\n\n>> "))
-
+		op1 =int(input("\nChoose mode of operation:\n\t1) Angular gain optimizer\n\t2) Linear gain optimizer\n\t3) Regular (Angular -> Linear movement)\n\t4) Camera Input \n\n>> "))
 		# if angular gain optimizer
 		if op1 == 1:
 			# get inputs from user
@@ -467,129 +502,9 @@ class TurtleBot(Node):
 					linear_error, linear_time, oscillations = self.move2goal(goal_pose, distance_tolerance, ctrl_type, kp, ki, kd)	
 					print(f"Angle error: {angle_error}, Angle time: {angle_time}, oscillations: {oscillations}")
 					print(f"Linear error: {linear_error}, Linear time: {linear_time}, oscillations: {oscillations}")
-				
-				
-				
-				
-		
-			
-#		distance_tolerance = float(input("Set your tolerance: "))
-		#angular_tolerance = float(input("Set your angular tolerance: "))
-#		ctrl_type = input("Choose control type:\n	P\n	PI\n	PID\n")
-		'''
-		#kpa = 1.5 
-		#kia = 0.1 
-		#kda = 0.2
-		kp = 1.5
-		kd = 0.1
-		ki = 0.2 
-		
-		kpa = float(input("Kpa: "))
-		kia = float(input("kia: "))
-		kda = float(input("kda: "))
-
-		kp = float(input("Kp: "))
-		ki = float(input("ki: "))
-		kd = float(input("kd: "))
-		# multi way point / single waypoint handling
-		if op2 == "y":
-			for i in range (0, num_waypoints):
-				pos_tuple = list_waypoints[i]
-				print(pos_tuple)
-				goal_pose.x = pos_tuple[0]
-				goal_pose.y = pos_tuple[1]
-				print(f"aligning: {i}")
-				angle_error, angle_time = self.align_angle(goal_pose, angular_tolerance, ctrl_type, kpa, kia, kda)
-				print(f"Angle error: {angle_error}, Angle time: {angle_time}")
-				print(self.pose.x, self.pose.y, self.pose.theta)						
-				linear_error, linear_time = self.move2goal(goal_pose, distance_tolerance, ctrl_type, kp, ki, kd)
-				print(f"Linear error: {linear_error}, Linear Time: {linear_time}")
-
-				#print(self.pose.x, self.pose.y, self.pose.theta)		
-				#self.send_request(5.544445, 5.544445, 0.0)
-				time.sleep(1)
-
-		# call movement functions. for purposes of determining optimal gain parameters, do nested loop, incrementing gains each time. 
-		# pass in gains as arguments
-		'''
-		'''
-		
-		kpa = 1.5 
-		kia = 0.1 
-		kda = 0.2 
-		kp = 1.5 
-		kd = 0.1 
-		ki = 0.2 
-		angle_error, angle_time = self.align_angle(goal_pose, ctrl_type, kpa/10, kia/10, kda/10)
-		distance_error, distance_time = self.move2goal(goal_pose, distance_tolerance, ctrl_type, kp/10, ki/10, kd/10)
-		'''
-		'''
-		# loop to calculate optimal angular gain parameters
-		ctrl_type = input("Choose control type:\n	P\n	PI\n	PID\n")		
-		kpa = float(input("Kpa: "))
-		kia = float(input("kia: "))
-		kda = float(input("kda: "))
-
-		angular_tolerance = 0.01
-		columns = ['kpa', 'kia', 'kda', 'angle_error', 'angle_time']
-		df1 = pd.DataFrame(columns=columns)
-		rows=[]
-		for kpa in range(1,16,2):
-			for kia in range (1,16,2):
-				for kda in range (1,16,2):
-					print(f"kpa: {kpa/10}, kia: {kia/10}, kda: {kda/10}")
-					angle_error, angle_time = self.align_angle(goal_pose, angular_tolerance, ctrl_type, kpa/10, kia/10, kda/10)
-					print(f"Angle error: {angle_error}, Angle time: {angle_time}")
-					#time.sleep(1)
-					self.send_request(5.544445, 5.544445, 0.0)
-					time.sleep(1)
-					row = {'kpa': kpa, 'kia': kia, 'kda': kda, 'angle_error': angle_error, 'angle_time': angle_time}
-					rows.append(row)
-		df1 = pd.concat([pd.DataFrame([row]) for row in rows],  ignore_index=True)
-		df1.to_csv('pid_tuning_results_angular.csv', index=False)
-		
-		'''
-		# loop to calculate optimal linear gain parameters
-		# first, change theta to perfect value
-		'''
-		self.send_request(5.544445, 5.544445, 225 * pi / 180)
-		columns = ['kp', 'ki', 'kd', 'linear_error', 'linear_time, oscillations']
-		df2 = pd.DataFrame(columns=columns)
-		rows2=[]
-		for kp in range(1,16,2):
-			for ki in range (1,16,2):
-				for kd in range (1,16,2):
-					print(f"kp: {kp/10}, ki: {ki/10}, kd: {kd/10}")
-					linear_error, linear_time, num_oscillations = self.move2goal(goal_pose, distance_tolerance,  ctrl_type, kp/10, ki/10, kd/10)
-					time.sleep(1)
-					print(f"Linear error: {linear_error}, Linear time: {linear_time}, oscillations: {num_oscillations}")
-					self.send_request(5.544445, 5.544445, 225 * pi /180)
-					time.sleep(2)
-					row = {'kp': kp/10, 'ki': ki/10, 'kd': kd/10, 'linear_error': linear_error, 'linear_time': linear_time, 'oscillations':
-						 num_oscillations}
-					rows2.append(row)
-		df2 = pd.concat([pd.DataFrame([row]) for row in rows2],  ignore_index=True)
-		df2.to_csv('pid_tuning_results_linear.csv', index=False)
-		'''
-		'''
-		columns = ['kp', 'ki', 'kd', 'kpa', 'kia', 'kda', 'distance_error', 'angle_error', 'angle_time', 'distance_time']
-		df = pd.DataFrame(columns=columns)
-		rows=[]
-		for kp in range(1,11,2):
-			for ki in range(1,11,2):
-				for kd in range(1,11,2):
-					print(f"kp: {kp/10}, ki: {ki/10}, kd: {kd/10}")
-					angle_error, angle_time = self.align_angle(goal_pose, ctrl_type, kp/10, ki/10, kd/10)
-					distance_error, distance_time = self.move2goal(goal_pose, distance_tolerance, ctrl_type, kp/10, ki/10, kd/10)
-					print(f"Angle error: {angle_error}, Angle Time: {angle_time}, Distance error: {distance_error}, Distance Time:{distance_time}")
-
-					time.sleep(1)
-					self.send_request(5.544445, 5.544445, 0.0)
-					row = {'kp': kp/10, 'ki': ki/10, 'kd': kd/10, 'kpa': kpa/10, 'kia': kia/10, 'kda': kda/10,
-						'distance_error': distance_error, 'angle_error': angle_error, 'angle_time': angle_time,
-						 'distance_time': distance_time}
-					rows.append(row)'''
-
+		elif op1 == 4:
+			ang_tol = float(input("Angulkar tolerance: "))
+			self.cam_angle(ang_tol, 0, 0, 0)
 def main(args=None):
 
 	rclpy.init(args=args)
