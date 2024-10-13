@@ -1,0 +1,3 @@
+[console_scripts]
+sim = sim_gtg.sim_code:main
+

@@ -1,0 +1,103 @@
+[0.000000] (-) TimerEvent: {}
+[0.001585] (-) JobUnselected: {'identifier': 'cam_pkg'}
+[0.001756] (sim_gtg) JobQueued: {'identifier': 'sim_gtg', 'dependencies': OrderedDict()}
+[0.014849] (sim_gtg) JobStarted: {'identifier': 'sim_gtg'}
+[0.098582] (-) TimerEvent: {}
+[0.200103] (-) TimerEvent: {}
+[0.300875] (-) TimerEvent: {}
+[0.401617] (-) TimerEvent: {}
+[0.502341] (-) TimerEvent: {}
+[0.603016] (-) TimerEvent: {}
+[0.703654] (-) TimerEvent: {}
+[0.804294] (-) TimerEvent: {}
+[0.904980] (-) TimerEvent: {}
+[1.005652] (-) TimerEvent: {}
+[1.106333] (-) TimerEvent: {}
+[1.207086] (-) TimerEvent: {}
+[1.308036] (-) TimerEvent: {}
+[1.408962] (-) TimerEvent: {}
+[1.510025] (-) TimerEvent: {}
+[1.611313] (-) TimerEvent: {}
+[1.712518] (-) TimerEvent: {}
+[1.822151] (-) TimerEvent: {}
+[1.923507] (-) TimerEvent: {}
+[2.024446] (-) TimerEvent: {}
+[2.125206] (-) TimerEvent: {}
+[2.225996] (-) TimerEvent: {}
+[2.326767] (-) TimerEvent: {}
+[2.427547] (-) TimerEvent: {}
+[2.528481] (-) TimerEvent: {}
+[2.629334] (-) TimerEvent: {}
+[2.730274] (-) TimerEvent: {}
+[2.831423] (-) TimerEvent: {}
+[2.932226] (-) TimerEvent: {}
+[3.033081] (-) TimerEvent: {}
+[3.133898] (-) TimerEvent: {}
+[3.234633] (-) TimerEvent: {}
+[3.335482] (-) TimerEvent: {}
+[3.436236] (-) TimerEvent: {}
+[3.537057] (-) TimerEvent: {}
+[3.637814] (-) TimerEvent: {}
+[3.738773] (-) TimerEvent: {}
+[3.840216] (-) TimerEvent: {}
+[3.941004] (-) TimerEvent: {}
+[4.041695] (-) TimerEvent: {}
+[4.142587] (-) TimerEvent: {}
+[4.236204] (sim_gtg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/sim_gtg', 'build', '--build-base', '/home/csav/ws_ros/build/sim_gtg/build', 'install', '--record', '/home/csav/ws_ros/build/sim_gtg/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/csav/ws_ros/src/sim_gtg', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'csav', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/csav', 'OLDPWD': '/home/csav/ws_ros/log', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1214', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/csav/ws_ros/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'csav', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'csav', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/csav/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/csav-desktop:@/tmp/.ICE-unix/1181,unix/csav-desktop:/tmp/.ICE-unix/1181', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/02b4dba8_8024_4e72_8118_6d6ffec0f13b', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.T454U2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.261', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/csav/ws_ros/install/cam_pkg:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/csav/ws_ros/build/sim_gtg', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/csav/ws_ros/build/sim_gtg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csav/ws_ros/install/sim_gtg/lib/python3.10/site-packages:/home/csav/ws_ros/install/cam_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[4.247019] (-) TimerEvent: {}
+[4.348945] (-) TimerEvent: {}
+[4.449974] (-) TimerEvent: {}
+[4.551679] (-) TimerEvent: {}
+[4.652375] (-) TimerEvent: {}
+[4.754724] (-) TimerEvent: {}
+[4.855371] (-) TimerEvent: {}
+[4.956110] (-) TimerEvent: {}
+[5.056835] (-) TimerEvent: {}
+[5.157638] (-) TimerEvent: {}
+[5.258579] (-) TimerEvent: {}
+[5.359324] (-) TimerEvent: {}
+[5.460089] (-) TimerEvent: {}
+[5.560831] (-) TimerEvent: {}
+[5.661625] (-) TimerEvent: {}
+[5.682805] (sim_gtg) StdoutLine: {'line': b'running egg_info\n'}
+[5.685116] (sim_gtg) StdoutLine: {'line': b'creating ../../build/sim_gtg/sim_gtg.egg-info\n'}
+[5.685956] (sim_gtg) StdoutLine: {'line': b'writing ../../build/sim_gtg/sim_gtg.egg-info/PKG-INFO\n'}
+[5.687235] (sim_gtg) StdoutLine: {'line': b'writing dependency_links to ../../build/sim_gtg/sim_gtg.egg-info/dependency_links.txt\n'}
+[5.687949] (sim_gtg) StdoutLine: {'line': b'writing entry points to ../../build/sim_gtg/sim_gtg.egg-info/entry_points.txt\n'}
+[5.695263] (sim_gtg) StdoutLine: {'line': b'writing requirements to ../../build/sim_gtg/sim_gtg.egg-info/requires.txt\n'}
+[5.697321] (sim_gtg) StdoutLine: {'line': b'writing top-level names to ../../build/sim_gtg/sim_gtg.egg-info/top_level.txt\n'}
+[5.698115] (sim_gtg) StdoutLine: {'line': b"writing manifest file '../../build/sim_gtg/sim_gtg.egg-info/SOURCES.txt'\n"}
+[5.700237] (sim_gtg) StdoutLine: {'line': b"reading manifest file '../../build/sim_gtg/sim_gtg.egg-info/SOURCES.txt'\n"}
+[5.701413] (sim_gtg) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[5.705555] (sim_gtg) StdoutLine: {'line': b"writing manifest file '../../build/sim_gtg/sim_gtg.egg-info/SOURCES.txt'\n"}
+[5.706147] (sim_gtg) StdoutLine: {'line': b'running build\n'}
+[5.706625] (sim_gtg) StdoutLine: {'line': b'running build_py\n'}
+[5.707401] (sim_gtg) StdoutLine: {'line': b'creating /home/csav/ws_ros/build/sim_gtg/build\n'}
+[5.707948] (sim_gtg) StdoutLine: {'line': b'creating /home/csav/ws_ros/build/sim_gtg/build/lib\n'}
+[5.708481] (sim_gtg) StdoutLine: {'line': b'creating /home/csav/ws_ros/build/sim_gtg/build/lib/sim_gtg\n'}
+[5.709017] (sim_gtg) StdoutLine: {'line': b'copying sim_gtg/__init__.py -> /home/csav/ws_ros/build/sim_gtg/build/lib/sim_gtg\n'}
+[5.709509] (sim_gtg) StdoutLine: {'line': b'copying sim_gtg/sim_code.py -> /home/csav/ws_ros/build/sim_gtg/build/lib/sim_gtg\n'}
+[5.710100] (sim_gtg) StdoutLine: {'line': b'running install\n'}
+[5.711092] (sim_gtg) StdoutLine: {'line': b'running install_lib\n'}
+[5.714461] (sim_gtg) StdoutLine: {'line': b'creating /home/csav/ws_ros/install/sim_gtg/lib/python3.10/site-packages/sim_gtg\n'}
+[5.716019] (sim_gtg) StdoutLine: {'line': b'copying /home/csav/ws_ros/build/sim_gtg/build/lib/sim_gtg/__init__.py -> /home/csav/ws_ros/install/sim_gtg/lib/python3.10/site-packages/sim_gtg\n'}
+[5.716468] (sim_gtg) StdoutLine: {'line': b'copying /home/csav/ws_ros/build/sim_gtg/build/lib/sim_gtg/sim_code.py -> /home/csav/ws_ros/install/sim_gtg/lib/python3.10/site-packages/sim_gtg\n'}
+[5.719295] (sim_gtg) StdoutLine: {'line': b'byte-compiling /home/csav/ws_ros/install/sim_gtg/lib/python3.10/site-packages/sim_gtg/__init__.py to __init__.cpython-310.pyc\n'}
+[5.720828] (sim_gtg) StdoutLine: {'line': b'byte-compiling /home/csav/ws_ros/install/sim_gtg/lib/python3.10/site-packages/sim_gtg/sim_code.py to sim_code.cpython-310.pyc\n'}
+[5.734031] (sim_gtg) StdoutLine: {'line': b'running install_data\n'}
+[5.734851] (sim_gtg) StdoutLine: {'line': b'creating /home/csav/ws_ros/install/sim_gtg/share/ament_index\n'}
+[5.735619] (sim_gtg) StdoutLine: {'line': b'creating /home/csav/ws_ros/install/sim_gtg/share/ament_index/resource_index\n'}
+[5.736068] (sim_gtg) StdoutLine: {'line': b'creating /home/csav/ws_ros/install/sim_gtg/share/ament_index/resource_index/packages\n'}
+[5.736676] (sim_gtg) StdoutLine: {'line': b'copying resource/sim_gtg -> /home/csav/ws_ros/install/sim_gtg/share/ament_index/resource_index/packages\n'}
+[5.737331] (sim_gtg) StdoutLine: {'line': b'copying package.xml -> /home/csav/ws_ros/install/sim_gtg/share/sim_gtg\n'}
+[5.737756] (sim_gtg) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.744522] (sim_gtg) StdoutLine: {'line': b'Copying ../../build/sim_gtg/sim_gtg.egg-info to /home/csav/ws_ros/install/sim_gtg/lib/python3.10/site-packages/sim_gtg-0.0.0-py3.10.egg-info\n'}
+[5.750279] (sim_gtg) StdoutLine: {'line': b'running install_scripts\n'}
+[5.761809] (-) TimerEvent: {}
+[5.836295] (sim_gtg) StdoutLine: {'line': b'Installing sim script to /home/csav/ws_ros/install/sim_gtg/lib/sim_gtg\n'}
+[5.838471] (sim_gtg) StdoutLine: {'line': b"writing list of installed files to '/home/csav/ws_ros/build/sim_gtg/install.log'\n"}
+[5.862085] (-) TimerEvent: {}
+[5.963607] (-) TimerEvent: {}
+[5.990038] (sim_gtg) CommandEnded: {'returncode': 0}
+[6.041505] (sim_gtg) JobEnded: {'identifier': 'sim_gtg', 'rc': 0}
+[6.044417] (-) EventReactorShutdown: {}
