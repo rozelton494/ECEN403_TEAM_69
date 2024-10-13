@@ -1,0 +1,38 @@
+[4.225s] Invoking command in '/home/csav/ws_ros/src/sim_gtg': PYTHONPATH=/home/csav/ws_ros/build/sim_gtg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csav/ws_ros/install/sim_gtg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/sim_gtg build --build-base /home/csav/ws_ros/build/sim_gtg/build install --record /home/csav/ws_ros/build/sim_gtg/install.log --single-version-externally-managed install_data
+[5.668s] running egg_info
+[5.670s] creating ../../build/sim_gtg/sim_gtg.egg-info
+[5.671s] writing ../../build/sim_gtg/sim_gtg.egg-info/PKG-INFO
+[5.672s] writing dependency_links to ../../build/sim_gtg/sim_gtg.egg-info/dependency_links.txt
+[5.673s] writing entry points to ../../build/sim_gtg/sim_gtg.egg-info/entry_points.txt
+[5.682s] writing requirements to ../../build/sim_gtg/sim_gtg.egg-info/requires.txt
+[5.683s] writing top-level names to ../../build/sim_gtg/sim_gtg.egg-info/top_level.txt
+[5.683s] writing manifest file '../../build/sim_gtg/sim_gtg.egg-info/SOURCES.txt'
+[5.685s] reading manifest file '../../build/sim_gtg/sim_gtg.egg-info/SOURCES.txt'
+[5.690s] adding license file 'LICENSE'
+[5.691s] writing manifest file '../../build/sim_gtg/sim_gtg.egg-info/SOURCES.txt'
+[5.691s] running build
+[5.692s] running build_py
+[5.693s] creating /home/csav/ws_ros/build/sim_gtg/build
+[5.693s] creating /home/csav/ws_ros/build/sim_gtg/build/lib
+[5.693s] creating /home/csav/ws_ros/build/sim_gtg/build/lib/sim_gtg
+[5.694s] copying sim_gtg/__init__.py -> /home/csav/ws_ros/build/sim_gtg/build/lib/sim_gtg
+[5.695s] copying sim_gtg/sim_code.py -> /home/csav/ws_ros/build/sim_gtg/build/lib/sim_gtg
+[5.695s] running install
+[5.696s] running install_lib
+[5.700s] creating /home/csav/ws_ros/install/sim_gtg/lib/python3.10/site-packages/sim_gtg
+[5.701s] copying /home/csav/ws_ros/build/sim_gtg/build/lib/sim_gtg/__init__.py -> /home/csav/ws_ros/install/sim_gtg/lib/python3.10/site-packages/sim_gtg
+[5.702s] copying /home/csav/ws_ros/build/sim_gtg/build/lib/sim_gtg/sim_code.py -> /home/csav/ws_ros/install/sim_gtg/lib/python3.10/site-packages/sim_gtg
+[5.704s] byte-compiling /home/csav/ws_ros/install/sim_gtg/lib/python3.10/site-packages/sim_gtg/__init__.py to __init__.cpython-310.pyc
+[5.706s] byte-compiling /home/csav/ws_ros/install/sim_gtg/lib/python3.10/site-packages/sim_gtg/sim_code.py to sim_code.cpython-310.pyc
+[5.719s] running install_data
+[5.720s] creating /home/csav/ws_ros/install/sim_gtg/share/ament_index
+[5.721s] creating /home/csav/ws_ros/install/sim_gtg/share/ament_index/resource_index
+[5.721s] creating /home/csav/ws_ros/install/sim_gtg/share/ament_index/resource_index/packages
+[5.722s] copying resource/sim_gtg -> /home/csav/ws_ros/install/sim_gtg/share/ament_index/resource_index/packages
+[5.722s] copying package.xml -> /home/csav/ws_ros/install/sim_gtg/share/sim_gtg
+[5.723s] running install_egg_info
+[5.730s] Copying ../../build/sim_gtg/sim_gtg.egg-info to /home/csav/ws_ros/install/sim_gtg/lib/python3.10/site-packages/sim_gtg-0.0.0-py3.10.egg-info
+[5.735s] running install_scripts
+[5.821s] Installing sim script to /home/csav/ws_ros/install/sim_gtg/lib/sim_gtg
+[5.824s] writing list of installed files to '/home/csav/ws_ros/build/sim_gtg/install.log'
+[5.976s] Invoked command in '/home/csav/ws_ros/src/sim_gtg' returned '0': PYTHONPATH=/home/csav/ws_ros/build/sim_gtg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csav/ws_ros/install/sim_gtg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/sim_gtg build --build-base /home/csav/ws_ros/build/sim_gtg/build install --record /home/csav/ws_ros/build/sim_gtg/install.log --single-version-externally-managed install_data

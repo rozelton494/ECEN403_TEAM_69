@@ -1,0 +1,36 @@
+running egg_info
+creating ../../build/sim_gtg/sim_gtg.egg-info
+writing ../../build/sim_gtg/sim_gtg.egg-info/PKG-INFO
+writing dependency_links to ../../build/sim_gtg/sim_gtg.egg-info/dependency_links.txt
+writing entry points to ../../build/sim_gtg/sim_gtg.egg-info/entry_points.txt
+writing requirements to ../../build/sim_gtg/sim_gtg.egg-info/requires.txt
+writing top-level names to ../../build/sim_gtg/sim_gtg.egg-info/top_level.txt
+writing manifest file '../../build/sim_gtg/sim_gtg.egg-info/SOURCES.txt'
+reading manifest file '../../build/sim_gtg/sim_gtg.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/sim_gtg/sim_gtg.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/csav/ws_ros/build/sim_gtg/build
+creating /home/csav/ws_ros/build/sim_gtg/build/lib
+creating /home/csav/ws_ros/build/sim_gtg/build/lib/sim_gtg
+copying sim_gtg/__init__.py -> /home/csav/ws_ros/build/sim_gtg/build/lib/sim_gtg
+copying sim_gtg/sim_code.py -> /home/csav/ws_ros/build/sim_gtg/build/lib/sim_gtg
+running install
+running install_lib
+creating /home/csav/ws_ros/install/sim_gtg/lib/python3.10/site-packages/sim_gtg
+copying /home/csav/ws_ros/build/sim_gtg/build/lib/sim_gtg/__init__.py -> /home/csav/ws_ros/install/sim_gtg/lib/python3.10/site-packages/sim_gtg
+copying /home/csav/ws_ros/build/sim_gtg/build/lib/sim_gtg/sim_code.py -> /home/csav/ws_ros/install/sim_gtg/lib/python3.10/site-packages/sim_gtg
+byte-compiling /home/csav/ws_ros/install/sim_gtg/lib/python3.10/site-packages/sim_gtg/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/csav/ws_ros/install/sim_gtg/lib/python3.10/site-packages/sim_gtg/sim_code.py to sim_code.cpython-310.pyc
+running install_data
+creating /home/csav/ws_ros/install/sim_gtg/share/ament_index
+creating /home/csav/ws_ros/install/sim_gtg/share/ament_index/resource_index
+creating /home/csav/ws_ros/install/sim_gtg/share/ament_index/resource_index/packages
+copying resource/sim_gtg -> /home/csav/ws_ros/install/sim_gtg/share/ament_index/resource_index/packages
+copying package.xml -> /home/csav/ws_ros/install/sim_gtg/share/sim_gtg
+running install_egg_info
+Copying ../../build/sim_gtg/sim_gtg.egg-info to /home/csav/ws_ros/install/sim_gtg/lib/python3.10/site-packages/sim_gtg-0.0.0-py3.10.egg-info
+running install_scripts
+Installing sim script to /home/csav/ws_ros/install/sim_gtg/lib/sim_gtg
+writing list of installed files to '/home/csav/ws_ros/build/sim_gtg/install.log'

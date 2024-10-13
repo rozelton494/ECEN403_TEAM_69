@@ -1,0 +1,36 @@
+running egg_info
+creating ../../build/cam_pkg/cam_pkg.egg-info
+writing ../../build/cam_pkg/cam_pkg.egg-info/PKG-INFO
+writing dependency_links to ../../build/cam_pkg/cam_pkg.egg-info/dependency_links.txt
+writing entry points to ../../build/cam_pkg/cam_pkg.egg-info/entry_points.txt
+writing requirements to ../../build/cam_pkg/cam_pkg.egg-info/requires.txt
+writing top-level names to ../../build/cam_pkg/cam_pkg.egg-info/top_level.txt
+writing manifest file '../../build/cam_pkg/cam_pkg.egg-info/SOURCES.txt'
+reading manifest file '../../build/cam_pkg/cam_pkg.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/cam_pkg/cam_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/csav/ws_ros/build/cam_pkg/build
+creating /home/csav/ws_ros/build/cam_pkg/build/lib
+creating /home/csav/ws_ros/build/cam_pkg/build/lib/cam_pkg
+copying cam_pkg/cam.py -> /home/csav/ws_ros/build/cam_pkg/build/lib/cam_pkg
+copying cam_pkg/__init__.py -> /home/csav/ws_ros/build/cam_pkg/build/lib/cam_pkg
+running install
+running install_lib
+creating /home/csav/ws_ros/install/cam_pkg/lib/python3.10/site-packages/cam_pkg
+copying /home/csav/ws_ros/build/cam_pkg/build/lib/cam_pkg/cam.py -> /home/csav/ws_ros/install/cam_pkg/lib/python3.10/site-packages/cam_pkg
+copying /home/csav/ws_ros/build/cam_pkg/build/lib/cam_pkg/__init__.py -> /home/csav/ws_ros/install/cam_pkg/lib/python3.10/site-packages/cam_pkg
+byte-compiling /home/csav/ws_ros/install/cam_pkg/lib/python3.10/site-packages/cam_pkg/cam.py to cam.cpython-310.pyc
+byte-compiling /home/csav/ws_ros/install/cam_pkg/lib/python3.10/site-packages/cam_pkg/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/csav/ws_ros/install/cam_pkg/share/ament_index
+creating /home/csav/ws_ros/install/cam_pkg/share/ament_index/resource_index
+creating /home/csav/ws_ros/install/cam_pkg/share/ament_index/resource_index/packages
+copying resource/cam_pkg -> /home/csav/ws_ros/install/cam_pkg/share/ament_index/resource_index/packages
+copying package.xml -> /home/csav/ws_ros/install/cam_pkg/share/cam_pkg
+running install_egg_info
+Copying ../../build/cam_pkg/cam_pkg.egg-info to /home/csav/ws_ros/install/cam_pkg/lib/python3.10/site-packages/cam_pkg-0.0.0-py3.10.egg-info
+running install_scripts
+Installing cam script to /home/csav/ws_ros/install/cam_pkg/lib/cam_pkg
+writing list of installed files to '/home/csav/ws_ros/build/cam_pkg/install.log'
